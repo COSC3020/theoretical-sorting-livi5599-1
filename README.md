@@ -23,11 +23,15 @@ To verify the claim, I could create an algorithm that generates a random list of
 
 To tell if the general sorting algorithm is slower by at least log(n), I could create a graph, where the x-axis represents the input size and the y-axis represents the time it takes for the algorithm to sort the list.  I could then compare the lines of the general sorting algorithm with X, and if the line of the general sorting algorithm grows more linearly than X, which would be growing logarithmically if it is asymptotically faster, then that means the general sorting algorithm is slower by at least log n.
 
+To tell if the claim is correct, every time the number of elements is increased, I could compare the runtimes of the algorithm when it was given previous list(s) and the new list with an increased length.  If the runtimes are improving at a linear runtime, the claim is true since that runtime would be asymptotically faster than the fastest runtime of general sorting algorithms, which is O(nlogn).
+
 I don’t believe X could be correct. Since comparison-based sorting algorithms work like binary decision trees, X can’t have a runtime faster than O(nlogn). The height of the tree with L leaves can’t be less than log2(L) because the maximum number of leaves a binary tree of height h can have is 2^h. With a runtime of O(n), the height of the tree would have to be smaller than log2(L), which isn’t possible since there are at least n! leaves.
 
 -----
 
 I recieved minimal help from ChatGPT on my answer to the second part of the assignment (the theoretical argument for why X could or could not be correct). I simply asked it to explain slide 63 of the sorting slides so I could have a better understanding on why the complexity of a general comparison-based sorting algorithm is Ω(nlogn). After I had a better understanding, I was able to write my answer.
+
+I also received minimal help from Ali.  He helped me come up with the way of testing the claim using only the algorithm itself, not by comparing it with another algorithm.
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
